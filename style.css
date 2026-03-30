@@ -1,32 +1,33 @@
 :root {
-    --main-color:#00eeff;
-    --text-color:#ffffff;
-    --bg-color-01:#1f242d;
-    --bg-color-02:#323946;
-    --color-00:#0000001a;
+    --main-color: #00eeff;
+    --text-color: #ffffff;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #323946;
+    --color-00: #0000001a;
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     text-decoration: none;
     border: none;
     outline: none;
     scroll-behavior: smooth;
 }
 
-html{
-    font-family: 'Poppins','sans-serif';
+html {
+    font-family: 'Poppins', 'sans-serif';
     font-size: 16px;
 }
-body{
+body {
     background-color: var(--bg-color-01);
-    color: var(--text-color);
+    color:var(--text-color);
 }
-header{
+
+header {
     position: fixed;
-    top: 0;
+    top:0;
     left: 0;
     width: 100%;
     padding: 1.1rem;
@@ -34,25 +35,26 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: index 100;
+    z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
 }
+
 .nav-responsive {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0%;
+    right: 0;
     width: 100%;
     padding: 1rem;
     background-color: rgb(0, 0, 0, 0.4);
     flex-direction: column;
-}
+} 
 
 .nav a, .nav-responsive a {
     font-size: 1.2rem;
@@ -61,11 +63,81 @@ header{
     transition: 0.4s;
 }
 
-.nav a, .nav-responsive a:hover{
+.nav a:hover, .nav-responsive a:hover {
     color: var(--main-color);
 }
 
-section{
+section {
     min-height: 100vh;
     padding: 6rem 6 rem 2 rem;
+}
+
+.home, .about {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.home-img {
+    border-right: solid 0.6rem;
+    border-bottom: solid 0.6rem;
+    border-image: linear-gradient (135deg, transparent 50%, var(--main-color)) 1;
+}
+
+.about-img {
+    border-left: solid 0.6rem;
+    border-bottom: solid 0.6rem;
+    border-image: linear-gradient (225deg, transparent 50%, var(--main-color)) 1;
+}
+
+.home-img, .about-img {
+    width: 100%;
+}
+.about {
+    background-color:var(--bg-color-02);
+    width: 45%;
+} 
+
+.home-content h1, .about-content h1 {
+    font-weight: 700;
+    line-height: 1,3;
+}
+
+.home-content h3, .about-content h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.home-content, .about-content {
+    width: 45%;
+
+}
+
+.home-content h1, .about-content h1 {
+    font-weight: 700;
+    line-height: 1,3;
+}
+
+.home-content h3, .about-content h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.home-content p, .about-content p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+.services h2,
+.portfolio h2
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.services-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25rem;
+    margin-bottom: 1rem;
 }
